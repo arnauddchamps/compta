@@ -12,6 +12,12 @@ body {
    /* background: #333; */
    height: 100vh;
    font-family: Arial, Helvetica, sans-serif;
+   color: #4ea88a;
+
+   h2 {
+      color: black;
+   }
+
 }
 
 header#header {
@@ -37,6 +43,10 @@ header#header {
 
             a {
                color: #4ea88a;
+
+               &.active {
+                  font-weight: 600;
+               }
             }
          }
       }

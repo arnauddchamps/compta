@@ -17,9 +17,9 @@
 		<header id="header">
 			<nav>
 				<ul>
-					<li><a href="{{path('index')}}">Home</a></li>
-					<li><a href="{{path('line_list')}}">Entrées bancaires</a></li>
-					<li><a href="{{path('category_list')}}">Catégories</a></li>
+					<li><a href="{{path('index')}}" class="{% if Utility.matchController('IndexController') %}active{% endif %}">Home</a></li>
+					<li><a href="{{path('line_list')}}" class="{% if Utility.matchController('LineController') %}active{% endif %}">Entrées bancaires</a></li>
+					<li><a href="{{path('category_list')}}" class="{% if Utility.matchController('CategoryController') %}active{% endif %}">Catégories</a></li>
 				</ul>
 			</nav>
 		</header>
