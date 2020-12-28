@@ -1,20 +1,34 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello IndexController!{% endblock %}
+{% block title %}Hello IndexController!
+{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-    {{"now"|date('h:i l')}}{{app.user ? app.user.email: "NO LOGGED"}}
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/mnt/c/Users/arnau/Documents/GitHub/compta/src/Controller/IndexController.php'|file_link(0) }}">src/Controller/IndexController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/mnt/c/Users/arnau/Documents/GitHub/compta/templates/index/index.html.twig'|file_link(0) }}">templates/index/index.html.twig</a></code></li>
-    </ul>
-</div>
+	<section>
+		<div class="container">
+			<header>
+				<h1>Compta</h1>
+			</header>
+			<section>
+				<div class="row">
+					<div class="col-4">
+						<div class="card">
+							<div class="card-header">Catégorie</div>
+							<div class="card-body">
+								<a href="{{path('category_new')}}">Ajouter une catégorie</a>
+							</div>
+						</div>
+					</div>
+                    <div class="col-4">
+						<div class="card">
+							<div class="card-header">Ligne bancaire</div>
+							<div class="card-body">
+								<a href="{{path('line_new')}}">Ajouter une entrée bancaire</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</section>
 {% endblock %}
