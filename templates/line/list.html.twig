@@ -19,6 +19,7 @@
 		<section>
 			<div class="row">
 				<div class="col-12">
+					<h2>Liste des entrées bancaires</h2>
 					<div class="table-responsive">
 						<table class="table">
 							<thead>
@@ -27,6 +28,7 @@
 									<th scope="col">Date</th>
 									<th scope="col">Titre</th>
 									<th scope="col">Description</th>
+									<th scope="col">Catégorie</th>
 									<th scope="col">Code</th>
 									<th scope="col">Montant</th>
 									<th></th>
@@ -39,6 +41,7 @@
 										<td>{{line.date|date("d/m/Y")}}</td>
 										<td>{{line.title}}</td>
 										<td>{{line.description}}</td>
+										<td>{{line.category ? line.category.title: "Aucune"}}</td>
 										<td>{{line.code}}</td>
 										<td>{{line.amount}}</td>
 										<td>

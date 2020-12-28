@@ -1,18 +1,26 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello LineController!{% endblock %}
+{% block title %}Hello LineController!
+{% endblock %}
 
 {% block body %}
 
-   <section id="category_edit">
-      <header></header>
-      <section>
-         <div class="row">
-            <div class="col-12 offset-1 col-md-6 offset-md-3">
-               {{form_start(form)}}
-               {{form_end(form)}}
-            </div>
-         </div>
-      </section>
-   </section>
+	<section id="category_edit">
+		<header>
+			<div class="row">
+				<div class="col-12 offset-1 col-md-6 offset-md-3">
+					<h2>Modifier la catégorie
+						{{category.title}}</h2>
+				</div>
+			</div>
+		</header>
+		<section>
+			<div class="row">
+				<div class="col-12 offset-1 col-md-6 offset-md-3">
+					{{form_start(form)}}
+					{{form_end(form)}}
+				</div>
+			</div>
+		</section>
+	</section>
 {% endblock %}
