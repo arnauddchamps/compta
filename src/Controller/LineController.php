@@ -36,7 +36,7 @@ class LineController extends AbstractController
     }
 
     /**
-     * @Route("/lines", name="lines", methods={"GET"})
+     * @Route("/lines", name="line_list", methods={"GET"})
      */
     public function list(): Response
     {

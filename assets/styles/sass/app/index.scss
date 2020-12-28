@@ -12,8 +12,14 @@ body {
    font-family: Arial, Helvetica, sans-serif;
 }
 
-#line_new, #line_list, #line_edit {
-   margin-top: 100px;
+#home {
+   .card-body {
+      display: grid;
+   }
+}
+
+#line_new, #line_list, #line_edit, #category_new, #category_list, #category_edit {
+   margin-top: 40px;
 
    header {
       height: 50px;

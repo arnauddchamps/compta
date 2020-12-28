@@ -11,5 +11,5 @@ import './styles/sass/app/index.scss';
 const $ = require('jquery');
 
 // start the Stimulus application
-import './bootstrap';
+// import './bootstrap';
 global.$ = global.jQuery = $;
