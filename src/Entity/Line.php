@@ -2,8 +2,8 @@
 
 namespace App\Entity;
 
-use App\Repository\LineRepository;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\LineRepository;
 
 /**
  * @ORM\Entity(repositoryClass=LineRepository::class)
@@ -38,7 +38,7 @@ class Line
     private $code;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="float")
      */
     private $amount;
 
@@ -95,15 +95,16 @@ class Line
         return $this;
     }
 
-    public function getAmount(): ?int
+    public function getAmount(): ?float
     {
         return $this->amount;
     }
 
-    public function setAmount(int $amount): self
+    public function setAmount(float $amount): self
     {
         $this->amount = $amount;
 
         return $this;
     }
+
 }
