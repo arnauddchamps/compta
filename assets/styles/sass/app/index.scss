@@ -1,6 +1,8 @@
 @import "~bootstrap/scss/bootstrap";
 
-*, ::before, ::after {
+*,
+::before,
+::after {
    box-sizing: border-box;
    margin: 0;
    padding: 0;
@@ -18,7 +20,12 @@ body {
    }
 }
 
-#line_new, #line_list, #line_edit, #category_new, #category_list, #category_edit {
+#line_new,
+#line_list,
+#line_edit,
+#category_new,
+#category_list,
+#category_edit {
    margin-top: 40px;
 
    header {
@@ -35,15 +42,25 @@ body {
             color: #4ea88a;
             text-decoration: none;
          }
-         
 
          svg {
             width: 40px;
             height: 40px;
+         }
+      }
+   }
+   section {
+      table {
+         td {
+            a {
+               padding-right: 10px;
+               color: #4ea88a;
+               cursor: pointer;
+               text-decoration: none;
+               svg {
+                  margin-top: -4px;
 
-
-            &.bi-pencil-fill {
-               margin-top: -4px;
+               }
             }
          }
       }

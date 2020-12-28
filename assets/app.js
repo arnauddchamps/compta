@@ -8,11 +8,11 @@
 // any CSS you import will output into a single css file (app.css in this case)
 import './styles/app.css';
 import './styles/sass/app/index.scss';
-const $ = require('jquery');
+// const $ = require('jquery');
 
-// start the Stimulus application
-// import './bootstrap';
-global.$ = global.jQuery = $;
+// // start the Stimulus application
+// // import './bootstrap';
+// global.$ = global.jQuery = $;
 
 // -> Put our input DOM element into a jQuery Object
 const $jqDate = jQuery('input[name="line[date]"]');
@@ -40,3 +40,5 @@ $.fn.noMask = function (regex) {
 
 // -> Call function noMask on this input
 $('input[name="line[date]"]').noMask(/[a-zA-Z]/);
+
+

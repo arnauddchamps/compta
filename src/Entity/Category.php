@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\CategoryRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -31,6 +33,16 @@ class Category
      * @ORM\Column(type="string", length=255)
      */
     private $code;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Line::class, mappedBy="category")
+     */
+    private $entries;
+
+    public function __construct()
+    {
+        $this->entries = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -69,6 +81,36 @@ class Category
     public function setCode(string $code): self
     {
         $this->code = $code;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Line[]
+     */
+    public function getEntries(): Collection
+    {
+        return $this->entries;
+    }
+
+    public function addEntry(Line $entry): self
+    {
+        if (!$this->entries->contains($entry)) {
+            $this->entries[] = $entry;
+            $entry->setCategory($this);
+        }
+
+        return $this;
+    }
+
+    public function removeEntry(Line $entry): self
+    {
+        if ($this->entries->removeElement($entry)) {
+            // set the owning side to null (unless already changed)
+            if ($entry->getCategory() === $this) {
+                $entry->setCategory(null);
+            }
+        }
 
         return $this;
     }
